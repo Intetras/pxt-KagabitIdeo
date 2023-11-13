@@ -3,14 +3,14 @@ namespace kagabitideo {
 
     //% group="リレー制御"
     //% blockId="relay_on"
-    //% block="テスト"
+    //% block="リレー ON"
     export function　relayOn(){
         pins.digitalWritePin(DigitalPin.P8, 1)
     }
 
     //% group="リレー制御"
     //% blockId="relay_on"
-    //% block="テスト"
+    //% block="リレー OFF"
     export function relayOff() {
         pins.digitalWritePin(DigitalPin.P8, 0)
     }
