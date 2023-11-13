@@ -9,7 +9,7 @@ namespace kagabitideo {
     }
 
     //% group="リレー制御"
-    //% blockId="relay_on"
+    //% blockId="relay_off"
     //% block="リレー OFF"
     export function relayOff() {
         pins.digitalWritePin(DigitalPin.P8, 0)
