@@ -25,6 +25,7 @@ namespace kagabitideo {
     //% group="モーター制御"
     //% blockId="motor"
     //% block="モーターの強さ %power"
+    //% power.min=-1023 power.max=1023
     export function motorA(power: number) {
         if (power > 1023) {
             power = 1023
