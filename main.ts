@@ -22,6 +22,17 @@ namespace kagabitideo {
         pins.digitalWritePin(DigitalPin.P8, 0)
     }
 
+    //% group="人感センサー"
+    //% blockId="human_move"
+    //% block="人が動いた"
+    export function humanMove():boolean {
+        if(pins.digitalReadPin(DigitalPin.P12)==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     //% group="モーター制御"
     //% blockId="motor"
     //% block="モーターの強さ %power"
