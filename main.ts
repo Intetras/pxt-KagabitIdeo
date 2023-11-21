@@ -19,6 +19,17 @@ namespace kagabitideo {
         }
     }
 
+    //% group="明るさセンサー"
+    //% blockId="is_dark"
+    //% block="暗い"
+    export function isBright(): boolean {
+        if (input.lightLevel() > 20) {
+            return true
+        } else {
+            return false
+        }
+    }
+
     //% group="リレー制御"
     //% blockId="relay_on"
     //% block="リレー ON"
