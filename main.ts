@@ -41,11 +41,11 @@ namespace kagabitideo {
     //% blockId="right_threshold"
     //% block="%rightnum より %setting"
     //% rightnum.min=0 rightnum.max=255
-    export function rightThreshold(rightnum: number, setting: dark_or_bright):boolean{
+    export function rightThreshold(rightnum: number, setting: dark_or_bright):number{
         if (setting = dark_or_bright.IS_BRIGHT){
-                return true
+                return 1
         }else{
-                return false
+                return 0
         }
     }
 
