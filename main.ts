@@ -10,9 +10,9 @@ namespace kagabitideo {
 
     export enum dark_or_bright{
         //% block="暗い"
-        dark = 1,
+        IS_DARK,
         //% block="明るい"
-        bright = 0
+        IS_BRIGHT = 0
     }
 
     //% group="明るさセンサー"
@@ -42,13 +42,13 @@ namespace kagabitideo {
     //% block="%rightnum より %setting"
     //% rightnum.min=0 rightnum.max=255
     export function rightThreshold(rightnum: number, setting: dark_or_bright):boolean{
-        if (setting = dark_or_bright.bright){
+        if (setting = dark_or_bright.IS_BRIGHT){
             if (input.lightLevel() > rightnum) {
                 return true
             } else {
                 return false
             }
-        } else if(setting = dark_or_bright.dark){
+        } else if(setting = dark_or_bright.IS_DARK){
             if (input.lightLevel() < rightnum) {
                 return true
             } else {
