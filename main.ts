@@ -8,6 +8,13 @@ namespace kagabitideo {
         Back = 0
     }
 
+    export enum dark_or_bright{
+        //% block="暗い"
+        dark = 1,
+        //% block="明るい"
+        bright = 0
+    }
+
     //% group="明るさセンサー"
     //% blockId="is_dark"
     //% block="暗い"
@@ -27,6 +34,26 @@ namespace kagabitideo {
             return true
         } else {
             return false
+        }
+    }
+
+    //% group="明るさセンサー"
+    //% blockId="right_threshold"
+    //% block="%rightnum より %setting"
+    //% rightnum.min=0 rightnum.max=255
+    export function rightThreshold(rightnum: number, setting: dark_or_bright):boolean{
+        if (setting = 0){
+            if (input.lightLevel() > rightnum) {
+                return true
+            } else {
+                return false
+            }
+        }else{
+            if (input.lightLevel() < rightnum) {
+                return true
+            } else {
+                return false
+            }
         }
     }
 
