@@ -16,6 +16,26 @@ namespace kagabitideo {
     }
 
     //% group="明るさセンサー"
+    //% blockId="right_threshold"
+    //% block="%rightnum より %setting"
+    //% rightnum.min=0 rightnum.max=255
+    export function rightThreshold(rightnum: number, setting: dark_or_bright): boolean {
+        if (setting === dark_or_bright.IS_BRIGHT) {
+            if (input.lightLevel() > rightnum) {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            if (input.lightLevel() < rightnum) {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+    
+    //% group="明るさセンサー"
     //% blockId="is_dark"
     //% block="暗い"
     export function isDark():boolean{
@@ -37,25 +57,7 @@ namespace kagabitideo {
         }
     }
 
-    //% group="明るさセンサー"
-    //% blockId="right_threshold"
-    //% block="%rightnum より %setting"
-    //% rightnum.min=0 rightnum.max=255
-    export function rightThreshold(rightnum: number, setting: dark_or_bright):boolean{
-        if (setting === dark_or_bright.IS_BRIGHT){
-            if (input.lightLevel() > rightnum) {
-                return true
-            } else {
-                return false
-            }
-        }else{
-            if (input.lightLevel() < rightnum) {
-                return true
-            } else {
-                return false
-            }
-        }
-    }
+ 
 
     //% group="リレー制御"
     //% blockId="relay_on"
