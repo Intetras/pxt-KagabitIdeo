@@ -8,6 +8,17 @@ namespace kagabitideo {
         Back = 0
     }
 
+    //% group="明るさセンサー"
+    //% blockId="is_dark"
+    //% block="暗い"
+    export function isDark():boolean{
+        if(input.lightLevel() < 20){
+            return true
+        }else{
+            return false
+        }
+    }
+
     //% group="リレー制御"
     //% blockId="relay_on"
     //% block="リレー ON"
