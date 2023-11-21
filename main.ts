@@ -42,18 +42,20 @@ namespace kagabitideo {
     //% block="%rightnum より %setting"
     //% rightnum.min=0 rightnum.max=255
     export function rightThreshold(rightnum: number, setting: dark_or_bright):boolean{
-        if (setting = 0){
+        if (setting = dark_or_bright.bright){
             if (input.lightLevel() > rightnum) {
                 return true
             } else {
                 return false
             }
-        }else{
+        } else if(setting = dark_or_bright.dark){
             if (input.lightLevel() < rightnum) {
                 return true
             } else {
                 return false
             }
+        }else{
+            return false
         }
     }
 
