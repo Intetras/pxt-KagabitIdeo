@@ -12,7 +12,7 @@ namespace kagabitideo {
         //% block="暗い"
         IS_DARK,
         //% block="明るい"
-        IS_BRIGHT = 0
+        IS_BRIGHT
     }
 
     //% group="明るさセンサー"
