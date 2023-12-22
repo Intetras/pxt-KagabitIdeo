@@ -50,7 +50,7 @@ namespace kagabitideo {
     //% blockId="is_bright"
     //% block="明るい"
     export function isBright(): boolean {
-        if (input.lightLevel() > 20) {
+        if (input.lightLevel() >= 20) {
             return true
         } else {
             return false
