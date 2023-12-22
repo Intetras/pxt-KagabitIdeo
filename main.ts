@@ -59,21 +59,21 @@ namespace kagabitideo {
 
  
 
-    //% group="リレー制御"
+    //% group="P8リレースイッチ"
     //% blockId="relay_on"
-    //% block="リレー ON"
+    //% block="リレースイッチ ON"
     export function　relayOn(){
         pins.digitalWritePin(DigitalPin.P8, 1)
     }
 
-    //% group="リレー制御"
+    //% group="P8リレースイッチ"
     //% blockId="relay_off"
-    //% block="リレー OFF"
+    //% block="リレースイッチ OFF"
     export function relayOff() {
         pins.digitalWritePin(DigitalPin.P8, 0)
     }
 
-    //% group="人感センサー"
+    //% group="P12人感センサー"
     //% blockId="human_move"
     //% block="人が動いた"
     export function humanMove():boolean {
@@ -84,7 +84,7 @@ namespace kagabitideo {
         }
     }
 
-    //% group="モーター制御"
+    //% group="P13/P14モーター制御"
     //% blockId="motor"
     //% block="モーターの強さ %power"
     //% power.min=-1023 power.max=1023
