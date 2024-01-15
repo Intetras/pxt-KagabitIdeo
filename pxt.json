@@ -11,7 +11,7 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "_locales/ja/KagabitIdeoKit-strings.json"
+        "_locales/ja/KagabitIdeo-Strings.json"
     ],
     "testFiles": [
         "test.ts"
