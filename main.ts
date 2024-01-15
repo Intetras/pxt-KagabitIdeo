@@ -2,7 +2,7 @@
 namespace kagabitideo {
 
     export enum direction {
-        //% block="前"
+        //% block="Forward"
         Forward = 1,
         //% block="後"
         Back = 0
