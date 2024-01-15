@@ -1,4 +1,4 @@
-//% weight=30 icon="\uf0eb" color=#000080 block="アイデオキット"
+//% weight=30 icon="\uf0eb" color=#000080 block="Kaga:bit-IdeoKit"
 namespace kagabitideo {
 
     export enum direction {
