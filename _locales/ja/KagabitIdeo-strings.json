@@ -1,4 +1,7 @@
 {
     "{id:category}kagabitideo": "アイデオキット",
-    "dark_or_bright.IS_DARK|block":"暗い"
+    "kagabitideo.dark_or_bright.IS_DARK|block":"暗い",
+    "kagabitideo.dark_or_bright.IS_BRIGHT|block":"明るい",
+    "kagabitideo.is_dark|block":"暗い",
+    "kagabitideo.is_bright|block":"明るい"
 }
