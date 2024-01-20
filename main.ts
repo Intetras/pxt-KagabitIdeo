@@ -9,7 +9,7 @@ namespace kagabitideo {
     }
 
     export enum dark_or_bright{
-        //% block="IS_DARK"
+        //% block="暗い"
         IS_DARK,
         //% block="明るい"
         IS_BRIGHT
