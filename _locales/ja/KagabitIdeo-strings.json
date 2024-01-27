@@ -2,8 +2,6 @@
     "{id:category}kagabitideo": "アイデオキット",
     "kagabitideo.direction.Forward|block":"前",
     "kagabitideo.direction.Back|block": "後",
-    "kagabitideo.dark_or_bright.IS_DARK|block":"暗い",
-    "kagabitideo.dark_or_bright.IS_BRIGHT|block":"明るい",
-    "kagabitideo.is_dark|block":"暗い",
-    "kagabitideo.is_bright|block":"明るい"
+    "kagabitideo.dark_or_bright.Is_Dark|block":"暗い",
+    "kagabitideo.dark_or_bright.IS_Bright|block":"明るい"
 }
