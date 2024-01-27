@@ -4,15 +4,15 @@ namespace kagabitideo {
     export enum direction {
         //% block="Forward"
         Forward = 1,
-        //% block="後"
+        //% block="Back"
         Back = 0
     }
 
     export enum dark_or_bright{
-        //% block="暗い"
-        IS_DARK,
+        //% block="Is_Dark"
+        Is_Dark,
         //% block="明るい"
-        IS_BRIGHT
+        Is_Bright
     }
 
     //% group="明るさセンサー"
@@ -20,7 +20,7 @@ namespace kagabitideo {
     //% block="%rightnum より %setting"
     //% rightnum.min=0 rightnum.max=255
     export function rightThreshold(rightnum: number, setting: dark_or_bright): boolean {
-        if (setting === dark_or_bright.IS_BRIGHT) {
+        if (setting === dark_or_bright.Is_Bright) {
             if (input.lightLevel() > rightnum) {
                 return true
             } else {
@@ -56,8 +56,6 @@ namespace kagabitideo {
             return false
         }
     }
-
- 
 
     //% group="P8リレースイッチ"
     //% blockId="relay_on"
