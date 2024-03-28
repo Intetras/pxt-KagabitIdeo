@@ -106,9 +106,9 @@ namespace kagabitideo {
         }
     }
 
-    // %group="グラフ表示"
-    // blockId="serialNameVal"
-    // block="グラフで表示 名前 %paraname 値 %value"
+    //% group="グラフ表示"
+    //% blockId="serialNameVal"
+    //% block="グラフで表示 名前 %paraname 値 %value"
     export function serialNameVal(paraname:string,value:number):void{
         serial.writeValue(paraname, value);
     }
