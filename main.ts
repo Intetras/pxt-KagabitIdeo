@@ -9,7 +9,7 @@ namespace kagabitideo {
     }
 
     export enum dark_or_bright{
-        //% block="Is_Dark"
+        //% block="暗い"
         Is_Dark,
         //% block="明るい"
         Is_Bright
@@ -106,4 +106,10 @@ namespace kagabitideo {
         }
     }
 
+    // %group="グラフ表示"
+    // blockId="serialNameVal"
+    // block="グラフで表示 名前 %paraname 値 %value"
+    export function serialNameVal(paraname:string,value:number):void{
+        serial.writeValue(paraname, value);
+    }
 }
