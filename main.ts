@@ -121,7 +121,7 @@ namespace kagabitideo {
         }
     }
 
-    //% group="データ"
+    //% group="データ計測"
     //% blockId="serialNameVal"
     //% block="データを表示 名前 %paraname 値 %value"
     export function serialNameVal(paraname:string,value:number):void{
