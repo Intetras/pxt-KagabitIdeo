@@ -5,7 +5,9 @@ namespace kagabitideo {
         //% block="Forward"
         Forward = 1,
         //% block="Back"
-        Back = 0
+        Back = -1,
+        //% block="stop"
+        Stop = 0
     }
 
     export enum dark_or_bright{
@@ -14,6 +16,8 @@ namespace kagabitideo {
         //% block="明るい"
         Is_Bright
     }
+
+    let deforeDirection = direction.Stop;
 
     //% group="明るさセンサー"
     //% blockId="right_threshold"
@@ -94,15 +98,26 @@ namespace kagabitideo {
         }
 
         if (power > 0) {
+            //逆電力対応
+            if (deforeDirection == direction.Back){
+                pins.analogWritePin(AnalogPin.P14, 0);
+                basic.pause(50)
+            }
             pins.digitalWritePin(DigitalPin.P13, direction.Forward);
             pins.analogWritePin(AnalogPin.P14, Math.abs(power));
+            deforeDirection = direction.Forward;
         } else if (power < 0) {
+            //逆電力対応
+            if (deforeDirection == direction.Forward) {
+                pins.analogWritePin(AnalogPin.P14, 0);
+                basic.pause(50)
+            }
             pins.digitalWritePin(DigitalPin.P13, direction.Back);
             pins.analogWritePin(AnalogPin.P14, Math.abs(power));
+            deforeDirection = direction.Back;
         } else {
-
             pins.analogWritePin(AnalogPin.P14, 0);
-
+            deforeDirection = direction.Stop;
         }
     }
 
