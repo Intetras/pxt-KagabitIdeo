@@ -1,4 +1,3 @@
-//% weight=30 icon="\uf0eb" color=#000080 block="Kaga:bit-IdeoKit"
 namespace kagabitideo {
 
     export enum direction {
@@ -18,6 +17,8 @@ namespace kagabitideo {
     }
 
     let deforeDirection = direction.Stop;
+    music.stopAllSounds()
+    motorA(0)
 
     //% group="明るさセンサー"
     //% blockId="right_threshold"
