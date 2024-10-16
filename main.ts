@@ -1,3 +1,4 @@
+//% block = "アイデオキット"
 namespace kagabitideo {
 
     export enum direction {
