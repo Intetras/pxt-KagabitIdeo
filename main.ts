@@ -1,4 +1,4 @@
-//% weight=30 icon="\uf26c" color=#0099FF block="アイデオキット"
+//% weight=30 icon="\uf26c" block="アイデオキット"
 namespace kagabitideo {
 
     export enum direction {
