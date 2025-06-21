@@ -5,9 +5,7 @@ namespace kagabitideo {
         //% block="Forward"
         Forward = 1,
         //% block="Back"
-        Back = -1,
-        //% block="stop"
-        Stop = 0
+        Back = 0
     }
 
     export enum dark_or_bright{
@@ -17,7 +15,7 @@ namespace kagabitideo {
         Is_Bright
     }
 
-    let deforeDirection = direction.Stop;
+    let deforeDirection = direction.Forward;
     music.stopAllSounds()
     motorA(0)
 
@@ -119,7 +117,6 @@ namespace kagabitideo {
             deforeDirection = direction.Back;
         } else {
             pins.analogWritePin(AnalogPin.P14, 0);
-            deforeDirection = direction.Stop;
         }
     }
 
